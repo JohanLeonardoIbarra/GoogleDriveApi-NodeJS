@@ -31,7 +31,7 @@ async function uploadFile(file) {
             },
             media: {
                 mimeType: file.mimetype,
-                body: fs.createReadStream(file.path)
+                body: fs.createReadStream(file)
             }
         })
         deleteTemporal(file.path);
